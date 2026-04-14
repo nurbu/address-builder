@@ -34,11 +34,24 @@ public class AddressCombiner {
         System.out.print("Shipping Zip Code: ");
         String shippingZipCode = scanner.nextLine();
 
-        StringBuilder billingCityStateZip = new StringBuilder(billingCity);
-        
-        StringBuilder shippingCityStateZip = new StringBuilder();
+        //Combined Billing city,state and zip code together
+
+        StringBuilder billingCityStateZip = new StringBuilder(billingCity + ", ");
+        billingCityStateZip.append(billingState + " ").append(billingZipCode);
+
+        //Combined Shipping city,state and zip code together
+
+        StringBuilder shippingCityStateZip = new StringBuilder(shippingCity + ", ");
+        shippingCityStateZip.append(shippingState + " ").append(shippingZipCode);
+
+        // Output
 
         System.out.println(fullName);
         System.out.println("\nBilling Street:");
+        System.out.println(billingStreet);
+        System.out.println(billingCityStateZip);
+        System.out.println("\nShipping City:");
+        System.out.println(shippingStreet);
+        System.out.println(shippingCityStateZip);
     }
 }
