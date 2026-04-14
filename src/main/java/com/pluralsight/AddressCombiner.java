@@ -2,7 +2,7 @@ package com.pluralsight;
 
 import java.util.Scanner;
 
-public class StringBuilder {
+public class AddressCombiner {
     public static void main(String[] args) {
         // Combines Billing and Shipping address using StringBuilder
 
@@ -33,5 +33,12 @@ public class StringBuilder {
         String shippingState = scanner.nextLine();
         System.out.print("Shipping Zip Code: ");
         String shippingZipCode = scanner.nextLine();
+
+        StringBuilder billingCityStateZip = new StringBuilder(billingCity);
+        
+        StringBuilder shippingCityStateZip = new StringBuilder();
+
+        System.out.println(fullName);
+        System.out.println("\nBilling Street:");
     }
 }
